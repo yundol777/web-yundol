@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
+    <meta property="og:title" content="윤돌의 페이지" />
+    <meta property="og:description" content="윤돌 자기소개 페이지입니다." />
+    <meta property="og:image" content="./images/profile.jpg" />
 
-    <title>Today I Learn</title>
+    <title>윤돌의 페이지</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
+    <script src="./js/bubble.js"></script>
   </head>
-  <body>
+  <body id="body">
     <!-- 상단 내비게이션 -->
     <nav class="top-nav">
       <span class="nav-logo">My Page</span>
@@ -30,11 +31,11 @@
       <div class="profile-card">
         <div class="profile-image">
           <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+          <img src="./images/profile.jpeg" alt="프로필 사진" />
         </div>
         <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
+          <h1>윤돌</h1>
+          <p class="tagline">FE 8기</p>
         </div>
       </div>
     </section>
@@ -43,8 +44,9 @@
       <!-- 자기소개 -->
       <section class="content-section">
         <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
+        <p>안녕하세요 !! 프론트엔드 8기 윤돌입니다.</p>
         <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
+        <a href="https://github.com/yundol777">github</a>
       </section>
 
       <!-- 기본 정보 -->
@@ -54,19 +56,19 @@
         <table class="info-table">
           <tr>
             <th>이름</th>
-            <td></td>
+            <td>정윤석</td>
           </tr>
           <tr>
             <th>MBTI</th>
-            <td></td>
+            <td>ISFP</td>
           </tr>
           <tr>
             <th>취미</th>
-            <td></td>
+            <td>영화, 음악, 사진, 여행, 고양이 구경하기</td>
           </tr>
           <tr>
             <th>좋아하는 음식</th>
-            <td></td>
+            <td>피자, 초밥, 돈까스</td>
           </tr>
         </table>
       </section>
@@ -74,33 +76,73 @@
       <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
+        <p class="section-desc">내가 좋아하는 것들</p>
         <div class="gallery-grid">
           <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+          <img src="./images/gallery-1.jpeg" alt="사진을 찍는 이미지" />
+          <img src="./images/gallery-2.webp" alt="초밥 이미지" />
+          <img src="./images/gallery-3.jpeg" alt="바다 위 등대 이미지" />
+          <img src="./images/gallery-4.webp" alt="노래 앨범 이미지" />
+          <img src="./images/gallery-5.png" alt="아스날 로고 이미지" />
+          <img src="./images/gallery-6.jpeg" alt="키보드 이미지" />
+          <img src="./images/gallery-7.jpeg" alt="고양이 이미지" />
+          <img src="./images/gallery-8.webp" alt="조구만 이미지" />
+          <img src="./images/gallery-9.jpeg" alt="눈사람 이미지" />
         </div>
       </section>
 
       <!-- 나를 울린 인생 작품 -->
       <section class="content-section" id="works">
         <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
+        <ul class="works-list">
           <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
-            <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
-            </div>
-            <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
-            </div>
-          </article>
-        </div>
+          <li>
+            <article class="work-card">
+              <div class="work-thumbnail">
+                <!-- 작품 이미지 -->
+                <img src="./images/work-1.webp" alt="웹툰 이미지" />
+              </div>
+              <div class="work-info">
+                <h3>엄마를 만나러 가는 길 (웹툰)</h3>
+                <p>한 번 울었어요</p>
+                <p>제목과 달리 외계인 나오는 SF 웹툰입니다.</p>
+                <p>주인공이 매우매우 귀엽습니다.</p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="work-card">
+              <div class="work-thumbnail">
+                <img src="./images/work-2.jpeg" alt="게임 이미지" />
+              </div>
+              <div class="work-info">
+                <h3>산나비 (게임)</h3>
+                <p>두 번 울었어요</p>
+                <p>도트 그래픽 기반 횡스크롤 액션 게임입니다.</p>
+                <p>스토리가 너무 슬퍼요..</p>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/NwuEoDvSOLw?si=S5rm5wxooZLpC5uq"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <!-- TIL (Today I Learned) -->
@@ -116,11 +158,22 @@
           </div>
           <div class="form-group">
             <label for="til-title">제목</label>
-            <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
+            <input
+              type="text"
+              id="til-title"
+              name="title"
+              placeholder="학습 주제를 입력하세요"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="til-content">내용</label>
-            <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
+            <textarea
+              id="til-content"
+              name="content"
+              placeholder="오늘 배운 내용을 정리해주세요"
+              required
+            ></textarea>
           </div>
           <div class="form-actions">
             <button type="submit">등록</button>
@@ -134,11 +187,13 @@
           <article class="til-item">
             <time>2026-03-15</time>
             <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            <p>
+              header, nav, main, section, article, footer 등 시멘틱 태그의
+              역할과 사용법을 배웠다.
+            </p>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer>
